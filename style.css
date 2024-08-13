@@ -1,87 +1,284 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: black;
+  font-family: "Inter", sans-serif;
+  background-color: black;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* shared style */
 
 .color-1 {
-    color: white;
+  color: white;
 }
 
 .color-2 {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .color-3 {
-    color: rgb(230, 83, 60);
+  color: rgb(230, 83, 60);
 }
 
 /* navbar style */
 
 header {
-    border: 2px solid red;
-    background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+  /* border: 2px solid red; */
+  background: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(
+    180deg,
+    rgb(17, 17, 17),
+    rgba(119, 119, 119, 0) 100%
+  );
 }
 
 .navbar {
-    max-width: 1440px;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-title {
-    font-size: 2.5rem;
-    font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .nav-items {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    width: 450px;
-    list-style: none;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  width: 450px;
+  list-style: none;
+}
+
+.nav-items li {
+  cursor: pointer;
 }
 
 .home {
-    width: 100px;
-    padding: 8px 30px;
-    margin-left: -20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 46px;
-    background: rgb(230, 83, 60);
+  width: 100px;
+  padding: 8px 30px;
+  margin-left: -20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 46px;
+  background: rgb(230, 83, 60);
 }
 
 .bars {
-    display: none;
+  display: none;
 }
 
+.banner {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-text > h1 {
+  font-size: 5rem;
+}
+
+.banner-text > p {
+  margin-top: 20px;
+  width: 550px;
+}
+
+.shape {
+  font-family: "Great Vibes", cursive;
+  font-weight: 100;
+  font-size: 8rem;
+}
+
+.banner-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.banner-btn > button {
+  width: 230px;
+  height: 60px;
+  padding: 15px 40px;
+  border-radius: 40px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.join-club {
+  background-color: rgb(230, 83, 60);
+  border: rgb(230, 83, 60);
+  font-size: 1.25rem;
+}
+
+.download-app {
+  background-color: #00000031;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  font-size: 1.25rem;
+}
+
+.banner-img {
+  position: relative;
+}
+
+.banner-img-card1 {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(9px);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: -460px;
+  margin-left: 230px;
+}
+
+.banner-img-card1 > h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-left: -45px;
+}
+
+.banner-img-card2 {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(9px);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: -165px;
+  margin-left: -100px;
+}
+
+.img-card-text > h4 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+
+.red-circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(230, 83, 60);
+    border-radius: 50%;
+  }
+
+
 @media screen and (max-width: 576px) {
-    header {
-        width: 90%;
-        margin: 0 auto;
-    }
+  .navbar, .banner {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
 
-    .nav-items {
-        display: none;
-    }
+  .nav-items {
+    display: none;
+  }
 
-    .bars {
-        display: block;
-        color: white;
-    }
+  .bars {
+    display: block;
+    color: white;
+  }
+
+  /* banner */
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner-text > h1 {
+    font-size: 3rem;
+  }
+
+  .shape {
+    font-size: 5rem;
+  }
+
+  .banner-text > p {
+    width: 280px;
+  }
+
+  .banner-btn > button {
+    width: 150px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-top: 50px;
+  }
+
+  .join-club,
+  .download-app {
+    font-size: 1rem;
+  }
+
+  .club {
+    display: none;
+  }
+
+  .banner-img {
+    width: 100%;
+  }
+
+  .banner-img-card1 {
+    width: 130px;
+    height: 80px;
+    margin-top: -530px;
+    margin-left: 190px;
+  }
+
+  .banner-img-card1 > h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-left: -45px;
+  }
+
+  .banner-img-card1 > p {
+    font-size: 0.7rem;
+    font-weight: 200;
+    margin-left: -5px;
+    margin-top: 3px;
+  }
+
+  .banner-img-card2 {
+    width: 150px;
+    height: 80px;
+    margin-top: -330px;
+    margin-left: 10px;
+  }
+
+  .img-card-text > h4 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+  }
+  .img-card-text > p {
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin-bottom: 5px;
+  }
+
+
+
 }
